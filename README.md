@@ -3,7 +3,7 @@ Learning Web3 Engineering in Details - No slacking of this path till I am fully 
 
 ---
 
-# 🗓️ 60-Day Web3 Tech Support Engineering Plan
+# 🗓️ 60-Day Web3 Engineering Plan
 
 ---
 
