@@ -3,107 +3,140 @@ Learning Web3 Engineering in Details - No slacking of this path till I am fully 
 
 ---
 
-# 🗓️ 30-Day Web3 Tech Support Prep Plan (Rust + Actix Web)
-
-## **Week 1 – Blockchain & Web3 Fundamentals**
-
-📌 Goal: Understand blockchain basics and get comfy with Web3 tooling.
-
-* **Day 1:** Learn blockchain basics: transactions, consensus, smart contracts.
-* **Day 2:** Install MetaMask, connect to Sepolia testnet, send a test transaction.
-* **Day 3:** Deploy an **ERC-20 contract** on Sepolia with Remix.
-* **Day 4:** Query balances using `ethers-rs` (Rust library).
-* **Day 5:** Explore **ERC-721 NFT standard**, mint a test NFT.
-* **Day 6:** Explore **The Graph** subgraphs with Rust client.
-* **Day 7:** Write a support-style doc: “How to check your transaction on Etherscan”.
+# 🗓️ 60-Day Web3 Tech Support Engineering Plan
 
 ---
 
-## **Week 2 – Actix Web & Rust API Development**
+## **Week 1 – Blockchain & Web3 Fundamentals (Part 1)**
 
-📌 Goal: Build a support-facing API backend in Rust.
+📌 Goal: Understand blockchain basics and set up tools.
 
-* **Day 8:** Scaffold an **Actix Web API**: `/` returns `"Hello Web3"`.
-* **Day 9:** Add an endpoint `/balance/{address}` → fetch ETH balance via `ethers-rs`.
-* **Day 10:** Add `/reverse-ip` route → store results in SQLite (`sqlx` or `diesel`).
-* **Day 11:** Implement `/healthz` route for health checks.
-* **Day 12:** Add `/metrics` endpoint with `prometheus` Rust crate.
-* **Day 13:** Run locally in Docker with port **5000 exposed**.
-* **Day 14:** Write a doc: “Exposing metrics from an Actix Web app”.
-
----
-
-## **Week 3 – Infra: Docker, Kubernetes, Monitoring**
-
-📌 Goal: Run Actix Web in real-world infra with monitoring.
-
-* **Day 15:** Containerize the Actix Web app (`Dockerfile`, `EXPOSE 5000`).
-* **Day 16:** Deploy it in **Kubernetes** with a `Deployment` + `Service`.
-* **Day 17:** Add **Prometheus ServiceMonitor** to scrape `/metrics`.
-* **Day 18:** Install **Grafana** and add a dashboard for Actix Web metrics.
-* **Day 19:** Add **node-exporter** to see cluster/node-level metrics.
-* **Day 20:** Learn `kubectl` troubleshooting:
-
-  * `kubectl logs`
-  * `kubectl describe`
-  * `kubectl port-forward`
-* **Day 21:** Write: “How to deploy an Actix Web app with Prometheus metrics in K8s”.
+* **Day 1:** Learn blockchain basics → [Ethereum.org Intro](https://ethereum.org/en/developers/docs/intro-to-ethereum/)
+* **Day 2:** Install MetaMask, connect to Sepolia testnet → [MetaMask Docs](https://support.metamask.io/)
+* **Day 3:** Deploy a simple **ERC-20 contract** on Sepolia using Remix → [Remix IDE](https://remix.ethereum.org/)
+* **Day 4:** Use [Etherscan](https://sepolia.etherscan.io/) to check your transaction.
+* **Day 5:** Explore **ERC-721 NFT** standard, mint a test NFT.
+* **Day 6:** Install `ethers-rs` and fetch ETH balance → [ethers-rs docs](https://docs.rs/ethers/latest/ethers/)
+* **Day 7:** Write doc: “How to check your transaction on Etherscan”.
 
 ---
 
-## **Week 4 – Support Simulation & Interview Prep**
+## **Week 2 – Blockchain & Web3 Fundamentals (Part 2)**
 
-📌 Goal: Practice real troubleshooting and support scenarios.
+📌 Goal: Work with Rust Web3 libraries & dApp debugging.
 
-* **Day 22:** Break your Actix Web deployment (bad port, crash) → troubleshoot logs.
-* **Day 23:** Mock support ticket response:
-
-  * “My node exporter shows Pending”
-  * “My smart contract call fails with out of gas”
-* **Day 24:** Debug CrashLoopBackoff in Kubernetes (simulate missing dependency).
-* **Day 25:** Handle “Transaction stuck pending” issue.
-* **Day 26:** Mock interview: explain **ERC-20 vs ERC-721** clearly.
-* **Day 27:** Mock interview: explain **Actix Web vs Flask** for performance.
-* **Day 28:** Mock interview: explain **K8s Service types (ClusterIP, NodePort, LB)**.
-* **Day 29:** Final project:
-
-  * Actix Web app with `/balance`, `/metrics`, `/reverse-ip`.
-  * Dockerized & deployed to K8s.
-  * Prometheus + Grafana dashboards working.
-  * Documented as **customer-facing support guide**.
-* **Day 30:** Review all notes, prepare **2–3 min crisp answers** for interviews.
+* **Day 8:** Query balances with `ethers-rs` CLI example.
+* **Day 9:** Call smart contract function using `ethers-rs`.
+* **Day 10:** Explore **The Graph** and query a subgraph. → [The Graph Docs](https://thegraph.com/docs/)
+* **Day 11:** Learn common support issues: stuck TX, gas errors.
+* **Day 12:** Debug contract call failures, reproduce in Remix.
+* **Day 13:** Explore JSON-RPC API (`eth_blockNumber`, `eth_getBalance`). → [Ethereum JSON-RPC Spec](https://ethereum.org/en/developers/docs/apis/json-rpc/)
+* **Day 14:** Write support doc: “Why is my transaction pending?”.
 
 ---
 
-# 🎯 Deliverables by the End
+## **Week 3 – Actix Web & Rust API Development (Part 1)**
 
-* ✅ Actix Web app (Rust) with `/healthz`, `/balance`, `/reverse-ip`, `/metrics`.
-* ✅ Containerized app in **Docker**, deployed in **K8s**.
-* ✅ Monitored with **Prometheus + Grafana + node-exporter**.
-* ✅ Support-style documentation & mock responses.
-* ✅ Confidence in troubleshooting **Rust APIs + Web3 infra**.
+📌 Goal: Build a support-facing backend in Rust.
+
+* **Day 15:** Scaffold Actix Web API (`cargo new`). → [Actix Web Book](https://actix.rs/docs/)
+* **Day 16:** Add `/` route → returns `"Hello Web3"`.
+* **Day 17:** Add `/balance/{address}` → fetch ETH balance via `ethers-rs`.
+* **Day 18:** Add `/reverse-ip` route → use SQLite with `sqlx`.
+* **Day 19:** Add `/healthz` route.
+* **Day 20:** Add `/metrics` route with `prometheus` crate. → [Prometheus Rust crate](https://crates.io/crates/prometheus)
+* **Day 21:** Write doc: “Exposing metrics from an Actix Web app”.
 
 ---
 
-👉 To make this more **interview/portfolio-ready**, I can give you a **sample repo structure** like:
+## **Week 4 – Actix Web & Rust API Development (Part 2)**
 
-```
-web3-support-prep/
-  actix-app/
-    src/
-    Cargo.toml
-    Dockerfile
-    k8s/
-      deployment.yaml
-      service.yaml
-      servicemonitor.yaml
-  contracts/
-    ERC20.sol
-    ERC721.sol
-  monitoring/
-    grafana-dashboards/
-    prometheus-values.yaml
-  docs/
-    troubleshooting.md
-    setup-guide.md
-```
+📌 Goal: Make the app production-ready.
+
+* **Day 22:** Add middleware (logging, CORS).
+* **Day 23:** Add error handling (custom errors).
+* **Day 24:** Write integration tests for routes.
+* **Day 25:** Add Dockerfile for Actix app.
+* **Day 26:** Run container locally → `docker run -p 5000:5000`.
+* **Day 27:** Add `docker-compose.yml` for local dev.
+* **Day 28:** Write doc: “Running Actix Web in Docker”.
+
+---
+
+## **Week 5 – Infra: Kubernetes & Monitoring (Part 1)**
+
+📌 Goal: Deploy Actix app to Kubernetes.
+
+* **Day 29:** Install Minikube or use GKE. → [Minikube Docs](https://minikube.sigs.k8s.io/docs/start/)
+* **Day 30:** Write K8s `Deployment` + `Service` for Actix app.
+* **Day 31:** Test with `kubectl port-forward`.
+* **Day 32:** Add Prometheus Operator → [prometheus-community/helm-charts](https://github.com/prometheus-community/helm-charts).
+* **Day 33:** Configure ServiceMonitor for `/metrics`.
+* **Day 34:** Install Grafana with Helm. → [Grafana Helm Chart](https://github.com/grafana/helm-charts)
+* **Day 35:** Write doc: “How to scrape Actix Web metrics with Prometheus”.
+
+---
+
+## **Week 6 – Infra: Kubernetes & Monitoring (Part 2)**
+
+📌 Goal: Add monitoring and practice troubleshooting.
+
+* **Day 36:** Deploy node-exporter for node metrics.
+* **Day 37:** Build Grafana dashboard for Actix app.
+* **Day 38:** Add alerts in Prometheus (high error rate).
+* **Day 39:** Simulate pod crash (bad env var), debug with `kubectl logs`.
+* **Day 40:** Simulate CrashLoopBackoff (missing dep), debug.
+* **Day 41:** Simulate node-exporter Pending issue.
+* **Day 42:** Write support doc: “Debugging apps in Kubernetes”.
+
+---
+
+## **Week 7 – Support Simulation & Advanced Troubleshooting**
+
+📌 Goal: Act like a support engineer.
+
+* **Day 43:** Answer mock ticket: “Why is my transaction out of gas?”
+* **Day 44:** Mock ticket: “My Prometheus is not scraping metrics.”
+* **Day 45:** Mock ticket: “Why is my K8s pod Pending?”
+* **Day 46:** Debug Service types (ClusterIP vs NodePort vs LB).
+* **Day 47:** Debug “Refused to connect” issues (firewall, Service).
+* **Day 48:** Compare **Actix Web vs Flask** performance.
+* **Day 49:** Write FAQ: “Common Web3 Support Issues”.
+
+---
+
+## **Week 8 – Final Project & Interview Prep**
+
+📌 Goal: Showcase full-stack support readiness.
+
+* **Day 50:** Build final Actix app with `/balance`, `/reverse-ip`, `/metrics`.
+* **Day 51:** Containerize and deploy to GKE.
+* **Day 52:** Expose via LoadBalancer service.
+* **Day 53:** Set up Prometheus + Grafana dashboards.
+* **Day 54:** Add monitoring alerts.
+* **Day 55:** Write **support docs** in repo:
+
+  * Setup guide
+  * Troubleshooting guide
+  * Metrics guide
+* **Day 56:** Mock interview: explain app architecture.
+* **Day 57:** Mock interview: explain troubleshooting steps.
+* **Day 58:** Mock interview: explain ERC-20 vs ERC-721.
+* **Day 59:** Mock interview: explain K8s Service types.
+* **Day 60:** Final review, polish repo, prepare portfolio/demo.
+
+---
+
+# 🎯 Deliverables by Day 60
+
+✅ Actix Web app with `/balance`, `/reverse-ip`, `/healthz`, `/metrics`.
+✅ Dockerized & deployed to Kubernetes (GKE or Minikube).
+✅ Prometheus + Grafana monitoring with node-exporter.
+✅ Repo with **docs, manifests, support guides**.
+✅ Mock interview readiness + troubleshooting confidence.
+
+---
+
+⚡ Commitment: Each week, I will commit code/docs to GitHub so you build a **public portfolio** — to give myself the joy *seeing progress*.
+
+---
