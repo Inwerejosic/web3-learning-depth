@@ -3,137 +3,148 @@ Learning Web3 Engineering in Details - No slacking of this path till I am fully 
 
 ---
 
-# 🗓️ 60-Day Web3 Engineering Plan
+Perfect 👍 — let’s expand your Solana + Actix **crowdfunding dApp learning plan** into a **comprehensive 75-day journey** that covers:
+
+* **Solana + Anchor smart contracts**
+* **Actix Web backend API**
+* **React frontend dApp**
+* **Kubernetes + monitoring**
+* **Support engineering prep**
+
+Here’s the full integrated **75-Day Solana Crowdfunding Engineer Plan** 👇
 
 ---
 
-## **Week 1 – Blockchain & Web3 Fundamentals (Part 1)**
-
-📌 Goal: Understand blockchain basics and set up tools.
-
-* **Day 1:** Learn blockchain basics → [Ethereum.org Intro](https://ethereum.org/en/developers/docs/intro-to-ethereum/)
-* **Day 2:** Install MetaMask, connect to Sepolia testnet → [MetaMask Docs](https://support.metamask.io/)
-* **Day 3:** Deploy a simple **ERC-20 contract** on Sepolia using Remix → [Remix IDE](https://remix.ethereum.org/)
-* **Day 4:** Use [Etherscan](https://sepolia.etherscan.io/) to check your transaction.
-* **Day 5:** Explore **ERC-721 NFT** standard, mint a test NFT.
-* **Day 6:** Install `ethers-rs` and fetch ETH balance → [ethers-rs docs](https://docs.rs/ethers/latest/ethers/)
-* **Day 7:** Write doc: “How to check your transaction on Etherscan”.
+# 🗓️ 75-Day Solana Crowdfunding dApp Engineering Plan
 
 ---
 
-## **Week 2 – Blockchain & Web3 Fundamentals (Part 2)**
+## **Phase 1 – Solana & Web3 Foundations (Days 1–15)**
 
-📌 Goal: Work with Rust Web3 libraries & dApp debugging.
+📌 Goal: Build solid fundamentals on blockchain, Solana, and tooling.
 
-* **Day 8:** Query balances with `ethers-rs` CLI example.
-* **Day 9:** Call smart contract function using `ethers-rs`.
-* **Day 10:** Explore **The Graph** and query a subgraph. → [The Graph Docs](https://thegraph.com/docs/)
-* **Day 11:** Learn common support issues: stuck TX, gas errors.
-* **Day 12:** Debug contract call failures, reproduce in Remix.
-* **Day 13:** Explore JSON-RPC API (`eth_blockNumber`, `eth_getBalance`). → [Ethereum JSON-RPC Spec](https://ethereum.org/en/developers/docs/apis/json-rpc/)
-* **Day 14:** Write support doc: “Why is my transaction pending?”.
-
----
-
-## **Week 3 – Actix Web & Rust API Development (Part 1)**
-
-📌 Goal: Build a support-facing backend in Rust.
-
-* **Day 15:** Scaffold Actix Web API (`cargo new`). → [Actix Web Book](https://actix.rs/docs/)
-* **Day 16:** Add `/` route → returns `"Hello Web3"`.
-* **Day 17:** Add `/balance/{address}` → fetch ETH balance via `ethers-rs`.
-* **Day 18:** Add `/reverse-ip` route → use SQLite with `sqlx`.
-* **Day 19:** Add `/healthz` route.
-* **Day 20:** Add `/metrics` route with `prometheus` crate. → [Prometheus Rust crate](https://crates.io/crates/prometheus)
-* **Day 21:** Write doc: “Exposing metrics from an Actix Web app”.
+* **Day 1:** Blockchain basics (Ethereum, Solana differences).
+* **Day 2:** Install Solana CLI, set up Devnet wallet.
+* **Day 3:** Learn Solana accounts model → [Solana Docs](https://docs.solana.com/developing/programming-model/overview).
+* **Day 4:** Send SOL transfers on Devnet.
+* **Day 5:** Explore SPL Token standard, mint your own token.
+* **Day 6:** Explore Anchor framework basics.
+* **Day 7:** Write doc: “How Solana differs from Ethereum”.
+* **Day 8:** Install Rust, cargo, set up dev environment.
+* **Day 9:** Build a simple Rust CLI tool to fetch Solana balance.
+* **Day 10:** Explore Solana JSON-RPC API (`getBalance`, `getBlock`).
+* **Day 11:** Write “support troubleshooting” notes for common wallet issues.
+* **Day 12:** Study Solana accounts rent & PDAs.
+* **Day 13:** Deploy a “Hello World” Anchor program.
+* **Day 14:** Call program from client (Rust).
+* **Day 15:** Write doc: “Deploying your first Solana program with Anchor”.
 
 ---
 
-## **Week 4 – Actix Web & Rust API Development (Part 2)**
+## **Phase 2 – Crowdfunding Program (Days 16–30)**
 
-📌 Goal: Make the app production-ready.
+📌 Goal: Implement core **crowdfunding Solana program** in Anchor.
 
-* **Day 22:** Add middleware (logging, CORS).
-* **Day 23:** Add error handling (custom errors).
-* **Day 24:** Write integration tests for routes.
-* **Day 25:** Add Dockerfile for Actix app.
-* **Day 26:** Run container locally → `docker run -p 5000:5000`.
-* **Day 27:** Add `docker-compose.yml` for local dev.
-* **Day 28:** Write doc: “Running Actix Web in Docker”.
-
----
-
-## **Week 5 – Infra: Kubernetes & Monitoring (Part 1)**
-
-📌 Goal: Deploy Actix app to Kubernetes.
-
-* **Day 29:** Install Minikube or use GKE. → [Minikube Docs](https://minikube.sigs.k8s.io/docs/start/)
-* **Day 30:** Write K8s `Deployment` + `Service` for Actix app.
-* **Day 31:** Test with `kubectl port-forward`.
-* **Day 32:** Add Prometheus Operator → [prometheus-community/helm-charts](https://github.com/prometheus-community/helm-charts).
-* **Day 33:** Configure ServiceMonitor for `/metrics`.
-* **Day 34:** Install Grafana with Helm. → [Grafana Helm Chart](https://github.com/grafana/helm-charts)
-* **Day 35:** Write doc: “How to scrape Actix Web metrics with Prometheus”.
+* **Day 16:** Scaffold Anchor program `crowdfunding`.
+* **Day 17:** Define `Campaign` account (PDA).
+* **Day 18:** Add instruction: **Create Campaign**.
+* **Day 19:** Add instruction: **Contribute**.
+* **Day 20:** Add instruction: **Withdraw** (owner only).
+* **Day 21:** Add constraints (min contrib, deadlines).
+* **Day 22:** Write integration tests with Anchor.
+* **Day 23:** Run tests on local validator.
+* **Day 24:** Fix errors, study error handling in Anchor.
+* **Day 25:** Deploy to Devnet.
+* **Day 26:** Write “support doc: Debugging Anchor program errors”.
+* **Day 27:** Add logging (msg!) in program.
+* **Day 28:** Test edge cases (insufficient funds).
+* **Day 29:** Optimize account size + serialization.
+* **Day 30:** Freeze v1 of crowdfunding program.
 
 ---
 
-## **Week 6 – Infra: Kubernetes & Monitoring (Part 2)**
+## **Phase 3 – Actix Backend API (Days 31–45)**
 
-📌 Goal: Add monitoring and practice troubleshooting.
+📌 Goal: Build Actix API for support, monitoring, and abstraction.
 
-* **Day 36:** Deploy node-exporter for node metrics.
-* **Day 37:** Build Grafana dashboard for Actix app.
-* **Day 38:** Add alerts in Prometheus (high error rate).
-* **Day 39:** Simulate pod crash (bad env var), debug with `kubectl logs`.
-* **Day 40:** Simulate CrashLoopBackoff (missing dep), debug.
-* **Day 41:** Simulate node-exporter Pending issue.
-* **Day 42:** Write support doc: “Debugging apps in Kubernetes”.
-
----
-
-## **Week 7 – Support Simulation & Advanced Troubleshooting**
-
-📌 Goal: Act like a support engineer.
-
-* **Day 43:** Answer mock ticket: “Why is my transaction out of gas?”
-* **Day 44:** Mock ticket: “My Prometheus is not scraping metrics.”
-* **Day 45:** Mock ticket: “Why is my K8s pod Pending?”
-* **Day 46:** Debug Service types (ClusterIP vs NodePort vs LB).
-* **Day 47:** Debug “Refused to connect” issues (firewall, Service).
-* **Day 48:** Compare **Actix Web vs Flask** performance.
-* **Day 49:** Write FAQ: “Common Web3 Support Issues”.
+* **Day 31:** Scaffold Actix project.
+* **Day 32:** Add `/` route → “Crowdfunding API live”.
+* **Day 33:** Add `/balance/{address}` → fetch balance via Solana RPC.
+* **Day 34:** Add `/campaigns` → list campaigns (read from PDAs).
+* **Day 35:** Add `/contribute` → POST request to call Anchor program.
+* **Day 36:** Add `/withdraw` route.
+* **Day 37:** Integrate error handling + JSON responses.
+* **Day 38:** Add `/healthz`.
+* **Day 39:** Add `/metrics` (Prometheus crate).
+* **Day 40:** Add middleware (CORS + logging).
+* **Day 41:** Add Dockerfile for Actix app.
+* **Day 42:** Run container locally → `docker run -p 5000:5000`.
+* **Day 43:** Add docker-compose with Solana test validator.
+* **Day 44:** Write doc: “Exposing Solana API metrics with Prometheus”.
+* **Day 45:** Finalize Actix backend v1.
 
 ---
 
-## **Week 8 – Final Project & Interview Prep**
+## **Phase 4 – React Frontend dApp (Days 46–60)**
 
-📌 Goal: Showcase full-stack support readiness.
+📌 Goal: Build a simple crowdfunding dApp UI.
 
-* **Day 50:** Build final Actix app with `/balance`, `/reverse-ip`, `/metrics`.
-* **Day 51:** Containerize and deploy to GKE.
-* **Day 52:** Expose via LoadBalancer service.
-* **Day 53:** Set up Prometheus + Grafana dashboards.
-* **Day 54:** Add monitoring alerts.
-* **Day 55:** Write **support docs** in repo:
-
-  * Setup guide
-  * Troubleshooting guide
-  * Metrics guide
-* **Day 56:** Mock interview: explain app architecture.
-* **Day 57:** Mock interview: explain troubleshooting steps.
-* **Day 58:** Mock interview: explain ERC-20 vs ERC-721.
-* **Day 59:** Mock interview: explain K8s Service types.
-* **Day 60:** Final review, polish repo, prepare portfolio/demo.
+* **Day 46:** Scaffold React app (Vite/CRA).
+* **Day 47:** Install `@solana/wallet-adapter` & Phantom wallet connect.
+* **Day 48:** Build wallet connect/disconnect button.
+* **Day 49:** Add **Create Campaign** form (calls Actix API).
+* **Day 50:** Add **Contribute** form (wallet signs TX → backend).
+* **Day 51:** Add **Withdraw** button (campaign owner).
+* **Day 52:** Add Campaigns list page (fetch from API).
+* **Day 53:** Add campaign detail view (funds raised, contributors).
+* **Day 54:** Add TailwindCSS styling + shadcn components.
+* **Day 55:** Write doc: “How to connect Solana wallet to React app”.
+* **Day 56:** Add error handling UI (e.g., pending TX).
+* **Day 57:** Integrate loading states & notifications.
+* **Day 58:** End-to-end test: Create → Contribute → Withdraw.
+* **Day 59:** Deploy frontend to Vercel/Netlify.
+* **Day 60:** Freeze frontend v1.
 
 ---
 
-# 🎯 Deliverables by Day 60
+## **Phase 5 – Kubernetes & Monitoring (Days 61–70)**
 
-✅ Actix Web app with `/balance`, `/reverse-ip`, `/healthz`, `/metrics`.
-✅ Dockerized & deployed to Kubernetes (GKE or Minikube).
-✅ Prometheus + Grafana monitoring with node-exporter.
-✅ Repo with **docs, manifests, support guides**.
-✅ Mock interview readiness + troubleshooting confidence.
+📌 Goal: Productionize with Kubernetes, monitoring, and observability.
+
+* **Day 61:** Install Minikube or use GKE.
+* **Day 62:** Write `Deployment` + `Service` for Actix API.
+* **Day 63:** Test with `kubectl port-forward`.
+* **Day 64:** Add Ingress or LoadBalancer service.
+* **Day 65:** Install Prometheus Operator via Helm.
+* **Day 66:** Add ServiceMonitor for Actix `/metrics`.
+* **Day 67:** Install Grafana, import dashboards.
+* **Day 68:** Deploy Node Exporter for node metrics.
+* **Day 69:** Build Grafana dashboard for API latency, errors.
+* **Day 70:** Write doc: “Monitoring Solana Actix API in Kubernetes”.
+
+---
+
+## **Phase 6 – Support & Final Project (Days 71–75)**
+
+📌 Goal: Polish repo, simulate support cases, prep for interviews.
+
+* **Day 71:** Simulate stuck TX issue → debug via logs.
+* **Day 72:** Simulate pod Pending → debug via `kubectl describe`.
+* **Day 73:** Write **support docs** (common errors + solutions).
+* **Day 74:** Mock interview: explain full architecture (frontend + Actix + Solana).
+* **Day 75:** Final polish → demo video, README, portfolio publish.
+
+---
+
+# 🎯 Final Deliverables by Day 75
+
+✅ Solana Anchor **crowdfunding program** (create, contribute, withdraw)
+✅ Actix backend API (health, balance, campaigns, metrics)
+✅ React frontend dApp (wallet connect, UI flows)
+✅ Dockerized + Kubernetes deployed app
+✅ Prometheus + Grafana monitoring
+✅ Full documentation (setup, troubleshooting, support guide)
+✅ Demo + interview readiness
 
 ---
 
